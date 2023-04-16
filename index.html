@@ -1,15 +1,12 @@
 <!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Astral by HTML5 UP</title>
+		<title>Sam Basile</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-grid.min.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -20,9 +17,10 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#work" class="icon solid fa-folder"><span>Work</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-						<a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a>
+						<a href="#resume" class="icon solid fa-file"><span>Resume</span></a>
+						<a href="#interests" class="icon solid fa-star"><span>Interests</span></a>
+						<a href="#projects" class="icon solid fa-folder"><span>Projects</span></a>
+						<a href="#socialmedia" class="icon brands fa-twitter"><span>Links</span></a>
 					</nav>
 
 				<!-- Main -->
@@ -31,24 +29,84 @@
 						<!-- Me -->
 							<article id="home" class="panel intro">
 								<header>
-									<h1>Jane Doe</h1>
-									<p>Senior Astral Projectionist</p>
+									<h1>Sam Basile</h1>
+									<p>Software Engineer</p>
 								</header>
-								<a href="#work" class="jumplink pic">
+								<a href="#about" class="jumplink pic">
 									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
 									<img src="images/me.jpg" alt="" />
 								</a>
 							</article>
-
-						<!-- Work -->
-							<article id="work" class="panel">
+						
+						<!-- About Me -->
+							<article id="about" class="panel">
 								<header>
-									<h2>Work</h2>
+									<h2>About Me</h2>
 								</header>
 								<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit.
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-									luctus elit eget interdum.
+									Hello to whoever has ventured into my website. My name is Sam Basile and I’m currently a senior at the University of Colorado Boulder majoring in Computer Science. I’m very interested in cybersecurity, particularly regarding cloud infrastructure. I like to learn about security flaws, fixes, and postmortems (such as this neat <a href="https://www.youtube.com/watch?v=kEsshExn7aE">example</a>) of Operating Systems. Ever since I started programming by making Minecraft mods as a teenager I’ve been learning by making my projects and tinkering with computers. I like to watch Twitch and have made some projects based around the platform which are showcased in this portfolio. I’m also a big fan of the Raspberry Pi which has served as my opportunity to dip my toes into the colossal ocean that is Linux. I also enjoy tabletop games. I've been having a blast with DnD 5e for a while now (in case someone is wondering: Inquisitive Rogue). I’m currently employed as a Software Engineer in Test on the Common Web Services team at SketchUp.
+									<br />This portfolio is to serve as a repository to work I’ve done and things that I find interesting. There are expositions of the projects I’ve done in this portfolio, links to all of my social media – my LinkedIn and my Twitter where I retweet all things Computer Science related that I find interesting. I hope that someone else can find some new YouTubers or researchers that they like from here. My resume is included here as well.  
+								</p>
+							</article>
+
+						<!-- Resume -->
+							<article id="resume" class="panel">
+								<header>
+									<h2>Resume</h2>
+								</header>
+								<object data="/content/resume.pdf#toolbar=0" width="100%" height="500px">
+									<p>Unable to display PDF file. <a href="/content/resume.pdf">Download</a> instead.</p>
+								</object>
+							</article>
+
+							<!-- Interests -->
+							<article id="interests" class="panel">
+								<header>
+									<h2>Interests</h2>
+								</header>
+								<h5>Home Lab</h5>
+								<p>I like to fiddle around with building small homelab projects, I currently have a Raspberry Pi that I use as a NAS. I’m reproposing my old computer to be a server for a few Docker containers - the most important use being a Minecraft server. Playing around with a Raspberry Pi served as my introduction to a lot of Linux topics and I still get to learn from it today.</p>
+								<h5>DnD</h5>
+								<p>Last year I joined the CU DnD Club and over the past year I’ve gotten into Dungeons and Dragons. It’s been super fun, I like that, in contrast to video games, it’s a tabletop game where you get to physically be with people. It takes teamwork and creativity to succeed and is just an all around good time.</p>
+								<h5>Twitch</h5>
+								<p>I like Twitch and I find that ecosystem on it to be very interesting as the entire website is one giant web of interconnected communities. I've done a lot of work in the past with their API which can be found in the projects section. </p>
+								<section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/NAS-BOX.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/d20.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/twitch.jpg" alt=""></a>
+										</div>
+									</div>
+								</section>
+							</article>
+
+						<!-- Projects -->
+							<article id="projects" class="panel">
+								<header>
+									<h2>Projects</h2>
+								</header>
+								<h5>Twitch Tracker</h5>
+								<p>
+									Twitch Tracker was a project I made that recorded which streams are being watched by which users for a month straight. My data scraper was made in Typescript and used PostgreSQL for storage. After a month of data collection, community detection and clustering algorithms were used to create a ‘map’ of the website, where streams that had high overlaps in viewership are clustered together.
+									<br />
+									<a href="https://github.com/sambasile10/twitch-tracker">Repository</a> | 
+									<a href="https://drive.google.com/file/d/1Wo_Nq-fpuuE-KceIE0mcIDKzLrTqqSCl/view?usp=sharing">Paper</a> |
+									<a href="https://drive.google.com/file/d/1pqz5dtOteXZ-ur4TBXu0WVr-o6byk79H/view?usp=sharing">Full Size Map</a>
+								</p>
+								<h5>Twitch Logger</h5>
+								<p>
+									Twitch Logger was a project that records and stores messages sent on predefined Twitch chat channels and allows for them to be searched later on. It consists of a Typescript backend for recording and storage using MongoDB as well as a web-based frontend written in React for searching through messages.
+									<br />
+									<a href="https://github.com/sambasile10/twitchlogger2">Repository</a>
+								</p>
+								<h5>PlaylistPal</h5>
+								<p>
+									PlaylistPal is a work-in-progress project that allows for the transferring of music playlists between different streaming platforms (YouTube, Apple Music, and Spotify). Users can easily select a source platform and a playlist on it alongside a destination platform and PlaylistPal will do its best to transfer the playlist. It gives users the option to do manual corrections of songs it may have missed. It has a Java Spring backend and a web-based frontend written with Svelte. 
 								</p>
 								<section>
 									<div class="row">
@@ -61,63 +119,21 @@
 										<div class="col-4 col-6-medium col-12-small">
 											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
 										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
-										</div>
-										<div class="col-4 col-6-medium col-12-small">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
-										</div>
 									</div>
 								</section>
 							</article>
 
-						<!-- Contact -->
-							<article id="contact" class="panel">
+						<!-- Social Media -->
+							<article id="socialmedia" class="panel">
 								<header>
-									<h2>Contact Me</h2>
+									<h2>Links</h2>
 								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form>
+									
+								<section>
+									<a href="https://www.linkedin.com/in/sam-basile"><p>Linkedin</p></a>
+									<a href="https://twitter.com/sambasile23"><p>Twitter</p></a>
+									<a href="https://github.com/sambasile10"><p>Github</p></a>
+								</section>
 							</article>
 
 					</div>
@@ -125,7 +141,7 @@
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="copyright">
-							<li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Sam Basile.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
 
